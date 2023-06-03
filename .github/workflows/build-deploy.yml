@@ -7,10 +7,10 @@ jobs:
     environment:
       name: testing
     env:
-      DATABASE_HOSTNAME: postgres
+      DATABASE_HOSTNAME: localhost
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: iyu1vap8
-      DATABASE_NAME: fastapi_test
+      DATABASE_NAME: fastapi
       DATABASE_USERNAME: postgres
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       ALGORITHM: ${{secrets.ALGORITHM}}
@@ -18,10 +18,10 @@ jobs:
 
     services:
       postgres:
-        image: postgres
+        image: postgres:latest
         env:
           POSTGRES_PASSWORD: iyu1vap8
-          POSTGRES_DB: fastapi_test
+          POSTGRES_DB: fastapi
         ports:
           - 5432:5432
         options: >-
