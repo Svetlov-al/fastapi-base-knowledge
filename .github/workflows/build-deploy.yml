@@ -21,6 +21,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+          POSTGRES_USER: ${{secrets.DATABASE_USERNAME}}
           POSTGRES_DB: ${{secrets.DATABASE_NAME}}_test
         ports:
           - 5432:5432
@@ -45,3 +46,5 @@ jobs:
         run: |
           pip install pytest
           pytest
+      - name: Print postgres logs
+        run: docker logs postgres || true
