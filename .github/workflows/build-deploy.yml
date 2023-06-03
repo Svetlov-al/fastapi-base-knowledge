@@ -7,7 +7,7 @@ jobs:
     environment:
       name: testing
     env:
-      DATABASE_HOSTNAME: localhost
+      DATABASE_HOSTNAME: postgres
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: iyu1vap8
       DATABASE_NAME: fastapi_test
