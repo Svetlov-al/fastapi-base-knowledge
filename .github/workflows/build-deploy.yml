@@ -10,7 +10,7 @@ jobs:
       DATABASE_HOSTNAME: localhost
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: iyu1vap8
-      DATABASE_NAME: fastapi
+      DATABASE_NAME: fastapi_test
       DATABASE_USERNAME: postgres
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       ALGORITHM: ${{secrets.ALGORITHM}}
