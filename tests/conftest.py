@@ -7,9 +7,8 @@ from app.database import get_db, Base
 from app.oauth2 import create_access_token
 from app import models
 import pytest
-
-
 # SQLALCHEMY_DATABASE_URL = "postgresql://postgres:iyu1vap8@localhost:5432/fastapi_test"
+
 
 SQLALCHEMY_DATABASE_URL = (f'postgresql://{settings.database_username}:{settings.database_password}@'
                            f'{settings.database_hostname}:{settings.database_port}/{settings.database_name}_test')
